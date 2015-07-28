@@ -12,7 +12,7 @@ var env         = require('minimist')(process.argv.slice(2)),
     uglify      = require('gulp-uglify'),
     concat      = require('gulp-concat'),
     gulpif      = require('gulp-if'),
-    shell = require('gulp-shell'),
+    shell       = require('gulp-shell'),
     stylus      = require('gulp-stylus'),
     jeet        = require('jeet'),
     rupture     = require('rupture'),
@@ -105,7 +105,7 @@ gulp.task('sitemap', shell.task([
 
 // gh-pages
 gulp.task('gh-pages', shell.task([
-  'git subtree push --prefix build origin gh-pages'
+  'git subtree push --prefix build origin master'
 ]));
 
 // Rsync
