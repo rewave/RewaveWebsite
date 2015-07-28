@@ -1,0 +1,15 @@
+div.cta
+    a(target="_blank", href="https://play.google.com/store/apps/details?id=com.rewaveapp", onclick="track.appDownloadClicked()")
+        div.app 
+            img(src="/img/play-icon.png", alt="Play Store Icon")
+            |Get App &#10548;
+
+    a(target="_blank", href="https://github.com/rewave/RewaveServer/releases/download/v0.0.1/RewaveServerSetup.exe", class="server-windows server-link", onclick="track.windowsServerDownloaded()")
+        div.server
+            img(src="/img/windows-icon.png", alt="Windows Icon")
+            |Download Server
+
+    a(target="_blank", href="https://github.com/rewave/RewaveServer/releases/download/v0.0.1/RewaveServerUbuntu.zip", class="server-ubuntu server-link", onclick="track.ubuntuServerDownloaded()")
+        div.server
+            img(src="/img/ubuntu-icon.png", alt="Windows Icon")
+            |Download Server

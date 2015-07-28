@@ -1,0 +1,327 @@
+/*  Syntax Quick Reference for Jeet
+	--------------------------
+	column(ratios = 1, offset = 0, cycle = 0, uncycle = 0, gutter = jeet.gutter)
+	span(ratio = 1, offset = 0)
+	shift(ratios = 0, col_or_span = column, gutter = jeet.gutter)
+	unshift()
+	edit()
+	center(max_width = 1410px, pad = 0)
+	stack(pad = 0, align = false)
+	unstack()
+	align(direction = both)
+	cf()
+
+	For more info see:
+		Kouto Swiss Doc: http://kouto-swiss.io/
+		Jeet Doc: http://jeet.gs
+
+	And of course, look in node_modules for axis-css and jeet
+*/
+
+@import "kouto-swiss"
+@import "jeet"
+
+@import url(http://fonts.googleapis.com/css?family=Cardo);
+@import url(http://fonts.googleapis.com/css?family=Lato);
+
+//colors
+$blue = #317cde
+$blue-darker = #417cff
+$yellow = #fff111
+
+//fonts
+$font-cardo = 'Cardo', serif
+
+normalize()
+meyer-reset()
+
+html, body
+    height:100%
+    color:#222
+    font-family: 'Lato', sans-serif;
+
+p 
+    line-height:25px
+    
+a
+    color: $blue-darker
+    text-decoration: none
+    
+//Hero
+.hero
+    background:$blue
+    min-height:85%
+    border-bottom: 10px solid $blue-darker
+    
+.hero .container
+    col(0.8)
+    align(both)
+    
+.hero .logo
+    //With text
+    margin:-40px 0 -10px -8px
+    
+    //Without text
+    //margin: 0 0 20px 0
+    max-height: 130px
+   
+.hero .text
+    color: #fff
+    col(0.6)
+    margin-top:8%
+    
+.hero .screen
+    col(0.4)
+     
+.hero .screen img
+    max-width: 100%    
+
+//Qs aka Why What etc.
+.Qs
+    display: table;
+    padding: 200px 0
+    font-family: $font-cardo
+
+.Qs .container
+    col(0.4)
+    shift(0.3)
+    margin: 30px 0 0
+
+.Qs h1
+    //col(1/3)
+    text-align:left
+    font-size:2.0rem
+    margin-bottom: 15px
+    
+.Qs p 
+    margin: 15px 0
+    font-size: 16px
+
+// Typography
+h1
+    font-size:3.0rem
+
+
+/**
+ * Partials
+ */
+ 
+//cta
+
+.cta
+    margin-top: 20px;
+
+.cta .app,.cta .server
+    background:#444;
+    padding: 10px 2px 20px;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 14px;
+
+.cta .app img, .cta .server img
+    max-height: 30px;
+    margin-bottom: -9px
+    margin-right: 10px
+
+.cta a, .cta a:active, .cta a:hover, .cta a:visited
+    color:#fff;
+    cursor: pointer; 
+    text-decoration:none
+    col(1/2)
+
+.cta .server-link
+    display: none
+    
+//nav
+.nav
+    padding: 80px 0 0
+    color: #333
+
+.nav a
+    color:#333
+    text-decoration: none
+    margin-right: 10px
+    font-size: 13px
+    
+.nav ul li 
+    display: inline
+    
+//footer
+footer
+    col(1)
+    display: table
+    background:$yellow
+    padding: 40px 0
+    
+footer .container
+    col(0.8)
+    shift(0.1)
+    
+footer .cta-again
+    col(1/2)
+    
+footer .social
+    col(1/2)
+    
+.footer-nav
+    background:$yellow
+    col(1)
+
+.footer-nav .nav
+    padding:10px 0
+    col(0.8)
+    shift(0.1)
+    
+footer .social img
+    margin-top: 20px
+    max-width: 50px
+    
+footer .social a 
+    col(1/6)
+    
+// pages nav
+.pages-nav
+    display: table
+    width: 100%
+    background: $blue
+    
+.pages-nav .container
+    col(0.8)
+    shift(0.1)
+    padding: 20px 0
+        
+.pages-nav .nav
+    padding: 0
+    margin-left:70px
+    margin-top:-16px
+    color: #333
+
+.pages-nav .nav a, .pages-nav a
+    color: #fff
+    padding: 5px
+    text-decoration: none
+    font-size: 15px
+    
+.pages-nav a.active
+    background: $blue-darker
+    
+.pages-nav .nav ul li 
+    margin: 15px 0
+    
+// pages/about    
+.pages-content .about
+    col(0.5)
+    shift(0.25)
+
+.pages-content .about h1
+    margin:20px 0
+    
+.pages-content .about h2
+    font-size: 1.5rem
+    margin: 10px 0
+
+.pages-content .about p 
+    margin: 20px 0
+    
+// pages/features
+.features
+    display: table;
+    background: #eff5fc
+    padding: 50px 0
+
+    .container
+        col(0.8)
+        shift(0.1)
+    
+    h1 
+        text-align: center
+        margin-bottom: 20px 
+        
+    .feature
+        col(1/3)
+        text-align: center
+        
+        h2
+            font-size: 1.5rem
+
+        img
+            max-height: 150px
+            margin: 20px 0
+            
+        p
+            padding: 20px
+    
+// Getting started
+.getting-started .platforms, .getting-started .guides
+    col(0.8)
+    shift(0.1)
+    margin-top: 20px
+    
+
+.getting-started .platforms ul li
+    display: inline
+    
+.getting-started .platforms a 
+    color: $blue-darker
+    margin: 0 10px 0 0
+    
+.getting-started .guides
+    col(0.8)
+    shift(0.1)
+    
+.getting-started h1
+    font-size: 1.8rem
+    margin: 20px 0
+    padding: 10px 0
+    border-bottom: 1px solid #eee
+    
+.getting-started h2
+    font-size: 1.5rem
+    margin: 10px 0
+    
+.getting-started .step
+    margin: 40px 0
+    
+.getting-started .step img
+    max-width: 50%
+    margin: 20px 0
+    center(500px)
+    
+.getting-started .step .img_caption
+    font-style:italic
+    font-size:11px
+    text-align: center
+    
+.getting-started p.code
+    font-family: $font-cardo
+    background: #eee
+    padding: 10px
+    border-radius: 5px
+    margin: 10px 0
+    
+.getting-started .help-goto
+    col(0.8)
+    shift(0.1)
+    margin: 30px 0
+    
+// Contact
+
+.contact 
+    display:table
+    width: 100%
+    
+.contact .text
+    margin: 20px 0
+    col(0.5)
+    shift(0.1)
+    h2
+        font-size: 1.2rem
+        margin: 20px 0
+    li
+        margin: 10px 0
+    
+.contact .panda
+    col(0.25)
+    margin-top: 50px
+    img 
+        max-width: 100%

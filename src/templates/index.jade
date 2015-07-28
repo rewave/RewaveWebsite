@@ -1,0 +1,33 @@
+doctype html
+html
+	head
+		include ./includes/head.jade
+
+	body
+		
+		div.hero: div.container
+			div.text
+				img(src="img/rewave-logo-with-text.png", alt="Rewave Logo", class="logo")
+				h1 Focus on your presentation, We'll handle the clicking
+				include ./includes/cta
+				include ./includes/nav
+
+			div.screen
+				img(src="img/rewave-app-screen.png", alt="Rewave Screenshot")				
+
+
+		div.why.Qs: div.container
+			h1 Present Like An Artist
+			p 
+				|We believe that great artists, leaders, orators and makers have one thing in common - THEY PRESENT WITH STYLE. At Rewave, we felt that it was an inherent problem, that a speaker had to click the next key on the keyboard while presenting, as it broke the flow. 
+			p
+				|A clicker was a good solution, but there's no need to buy extra hardware, this can be done using a phone, and Rewave was born.
+
+			p 
+				|Rewave is an Android app that converts your phone into a presentation remote. You connect to the computer, on which your presentations are running, over bluetooth and control the slides using simple tap gestures. Single tap to go forward, double tap to go back. 
+
+		include ./includes/footer
+
+		
+			
+	script(type="text/javascript", src="js/main.js")
