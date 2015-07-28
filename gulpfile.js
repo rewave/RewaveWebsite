@@ -105,7 +105,7 @@ gulp.task('sitemap', shell.task([
 
 // gh-pages
 gulp.task('gh-pages', shell.task([
-  'git subtree push --prefix build origin master'
+  'git subtree push --prefix build upstream master'
 ]));
 
 // Rsync
