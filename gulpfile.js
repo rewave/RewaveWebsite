@@ -100,7 +100,7 @@ gulp.task('browser-sync', function () {
 });
 
 gulp.task('sitemap', shell.task([
-  'sitemap-static --ignore-file=sitemap-ignore.json --prefix=http://rewaveapp.com/ ./build > ./build/sitemap.xml'
+  'sitemap-static --ignore-file=sitemap-ignore.json --prefix=http://rewaveapp.com/ build/ > ./build/sitemap.xml'
 ]));
 
 // gh-pages

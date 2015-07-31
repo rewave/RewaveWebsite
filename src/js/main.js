@@ -33,7 +33,7 @@ if (navigator.appVersion.indexOf("X11")!=-1) OSName="UNIX";
 if (navigator.appVersion.indexOf("Linux")!=-1) OSName="Linux";
 
 if(OSName == "Windows") {
-  var els = document.getElementsByClassName('server-ubuntu');
+  var els = document.getElementsByClassName('server-windows');
   Object.keys(els).map(function(index) {
     els.item(index).style.display = 'initial';
   });
